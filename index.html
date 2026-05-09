@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChemLab 3D — Elements, Acids & Bases</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar glass">
+      <div>
+        <h1>ChemLab 3D</h1>
+        <p>Explore element models in a futuristic 3D lab.</p>
+      </div>
+      <button id="modeToggle" class="btn">Switch to Model View</button>
+    </header>
+
+    <main>
+      <section id="featurePanel" class="panel glass active">
+        <h2>Feature View</h2>
+        <ul>
+          <li>Interactive 3D atom model with animated electrons.</li>
+          <li>Acids and bases inventory in a sci-fi lab ring.</li>
+          <li>Lab controls: rotate, zoom, focus, and spin speed.</li>
+          <li>Mobile-first layout with touch-friendly controls.</li>
+        </ul>
+      </section>
+
+      <section id="modelPanel" class="panel glass">
+        <h2>Model View</h2>
+        <div class="controls">
+          <button class="btn" id="toggleSpin">Pause Spin</button>
+          <label>
+            Spin Speed
+            <input id="speed" type="range" min="0" max="2" step="0.05" value="0.7" />
+          </label>
+        </div>
+      </section>
+
+      <section class="canvas-wrap glass">
+        <canvas id="scene"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
